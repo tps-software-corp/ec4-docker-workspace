@@ -1,10 +1,10 @@
 <?php
 
-namespace Plugin\TPS\Controller\Admin;
+namespace Plugin\SNS_Login\Controller\Admin;
 
 use Eccube\Controller\AbstractController;
-use Plugin\TPS\Form\Type\Admin\ConfigType;
-use Plugin\TPS\Repository\ConfigRepository;
+use Plugin\SNS_Login\Form\Type\Admin\ConfigType;
+use Plugin\SNS_Login\Repository\ConfigRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -27,8 +27,8 @@ class ConfigController extends AbstractController
     }
 
     /**
-     * @Route("/%eccube_admin_route%/tps/config", name="tps_admin_config")
-     * @Template("@TPS/admin/config.twig")
+     * @Route("/%eccube_admin_route%/tps/config", name="sns_login_admin_config")
+     * @Template("@SNS_Login/admin/config.twig")
      */
     public function index(Request $request)
     {
@@ -42,7 +42,7 @@ class ConfigController extends AbstractController
             $this->entityManager->flush($Config);
             $this->addSuccess('登録しました。', 'admin');
 
-            return $this->redirectToRoute('tps_admin_config');
+            return $this->redirectToRoute('sns_login_admin_config');
         }
 
         return [

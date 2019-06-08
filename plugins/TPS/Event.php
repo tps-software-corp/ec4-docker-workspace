@@ -1,6 +1,6 @@
 <?php
 
-namespace Plugin\TPS;
+namespace Plugin\SNS_Login;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 

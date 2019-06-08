@@ -1,14 +1,14 @@
 <?php
 
-namespace Plugin\TPS\Entity;
+namespace Plugin\SNS_Login\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Config
  *
- * @ORM\Table(name="plg_tps_config")
- * @ORM\Entity(repositoryClass="Plugin\TPS\Repository\ConfigRepository")
+ * @ORM\Table(name="plg_sns_login_config")
+ * @ORM\Entity(repositoryClass="Plugin\SNS_Login\Repository\ConfigRepository")
  */
 class Config
 {

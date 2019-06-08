@@ -1,12 +1,12 @@
 {
-  "name": "ec-cube/TPS",
+  "name": "ec-cube/SNS_Login",
   "version": "1.0.0",
-  "description": "TPS",
+  "description": "SNS_Login",
   "type": "eccube-plugin",
   "require": {
     "ec-cube/plugin-installer": "~0.0.7"
   },
   "extra": {
-    "code": "TPS"
+    "code": "SNS_Login"
   }
 }

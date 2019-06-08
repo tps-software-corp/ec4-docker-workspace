@@ -1,9 +1,9 @@
 <?php
 
-namespace Plugin\TPS\Repository;
+namespace Plugin\SNS_Login\Repository;
 
 use Eccube\Repository\AbstractRepository;
-use Plugin\TPS\Entity\Config;
+use Plugin\SNS_Login\Entity\Config;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
