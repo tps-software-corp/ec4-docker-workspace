@@ -27,7 +27,7 @@ class ConfigController extends AbstractController
     }
 
     /**
-     * @Route("/%eccube_admin_route%/tps/config", name="sns_login_admin_config")
+     * @Route("/%eccube_admin_route%/sns_login/config", name="sns_login_admin_config")
      * @Template("@SNS_Login/admin/config.twig")
      */
     public function index(Request $request)
