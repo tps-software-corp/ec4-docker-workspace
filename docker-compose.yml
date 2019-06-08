@@ -1,6 +1,6 @@
 version: '3'
 networks:
-  backend:
+  sns_login:
     driver: bridge
 services:
   apache:
@@ -10,9 +10,9 @@ services:
       - "5080:80"
       - "5081:443"
     volumes:
-      - ./plugins/TPS:/var/www/html/app/Plugin/TPS
+      - ./plugins/TPS:/var/www/html/app/Plugin/SNS_Login
     networks:
-      - backend
+      - sns_login
     depends_on:
       - "db"
   db:
@@ -27,7 +27,7 @@ services:
       - MYSQL_PASSWORD=eccube4
       - MYSQL_ROOT_PASSWORD=root
     networks:
-      - backend
+      - sns_login
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     environment:
@@ -40,4 +40,4 @@ services:
     depends_on:
       - "db"
     networks:
-      - backend
+      - sns_login
