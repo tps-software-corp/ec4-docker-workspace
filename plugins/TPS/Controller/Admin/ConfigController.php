@@ -15,6 +15,7 @@ class ConfigController extends AbstractController
      * @var ConfigRepository
      */
     protected $configRepository;
+    protected $clientRegistry;
 
     /**
      * ConfigController constructor.

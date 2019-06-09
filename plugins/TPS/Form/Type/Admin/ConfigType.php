@@ -17,7 +17,13 @@ class ConfigType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('name', TextType::class, [
+        $builder->add('fb_app_id', TextType::class, [
+            'constraints' => [
+                new NotBlank(),
+                new Length(['max' => 255]),
+            ],
+        ]);
+        $builder->add('fb_app_secret', TextType::class, [
             'constraints' => [
                 new NotBlank(),
                 new Length(['max' => 255]),

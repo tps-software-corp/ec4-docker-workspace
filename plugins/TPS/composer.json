@@ -4,7 +4,9 @@
   "description": "SNS_Login",
   "type": "eccube-plugin",
   "require": {
-    "ec-cube/plugin-installer": "~0.0.7"
+    "ec-cube/plugin-installer": "~0.0.7",
+    "knpuniversity/oauth2-client-bundle": "*",
+    "knpuniversity/league/oauth2-facebook": "*"
   },
   "extra": {
     "code": "SNS_Login"

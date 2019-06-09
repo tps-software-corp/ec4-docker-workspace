@@ -3,7 +3,7 @@
 {% set menus = ['store', 'plugin', 'plugin_list'] %}
 
 {% block title %}SNS_Login{% endblock %}
-{% block sub_title %}プラグイン一覧{% endblock %}
+{% block sub_title %}{{ 'admin.setting' | trans }}{% endblock %}
 
 {% form_theme form '@admin/Form/bootstrap_4_horizontal_layout.html.twig' %}
 
@@ -20,14 +20,20 @@
             <div class="c-contentsArea__primaryCol">
                 <div class="c-primaryCol">
                     <div class="card rounded border-0 mb-4">
-                        <div class="card-header"><span>設定</span></div>
+                        <div class="card-header"><span>{{'sns_login.facebook' | trans}}</span></div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-3"><span>名前</span><span
-                                            class="badge badge-primary ml-1">必須</span></div>
+                                <div class="col-3"><span>{{'sns_login.app_id' | trans}}</span></div>
                                 <div class="col mb-2">
-                                    {{ form_widget(form.name) }}
-                                    {{ form_errors(form.name) }}
+                                    {{ form_widget(form.fb_app_id) }}
+                                    {{ form_errors(form.fb_app_id) }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3"><span>{{'sns_login.app_secret' | trans}}</span></div>
+                                <div class="col mb-2">
+                                    {{ form_widget(form.fb_app_secret) }}
+                                    {{ form_errors(form.fb_app_secret) }}
                                 </div>
                             </div>
                         </div>
@@ -43,7 +49,7 @@
                             <a class="c-baseLink"
                                href="{{ url('admin_store_plugin') }}">
                                 <i class="fa fa-backward" aria-hidden="true"></i>
-                                <span>プラグイン一覧</span>
+                                <span>{{'common.back' | trans}}</span>
                             </a>
                         </div>
                     </div>
@@ -51,7 +57,7 @@
                         <div class="row align-items-center justify-content-end">
                             <div class="col-auto">
                                 <button class="btn btn-ec-conversion px-5"
-                                        type="submit">登録</button>
+                                        type="submit">{{'admin.common.save' | trans}}</button>
                             </div>
                         </div>
                     </div>

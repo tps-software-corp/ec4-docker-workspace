@@ -1,0 +1,11 @@
+# httplug:
+#   clients:
+#     default:
+#       factory: 'httplug.factory.curl'
+#     hwi_special:
+#       factory: 'httplug.factory.guzzle6'
+
+# hwi_oauth:
+#   http:
+#     client: httplug.client.hwi_special # Default to httplug.client.default
+#     factory: httplug.stream_factory    # Default to httplug.message_factory.default

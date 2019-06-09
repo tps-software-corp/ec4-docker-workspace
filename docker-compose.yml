@@ -10,7 +10,8 @@ services:
       - "5080:80"
       - "5081:443"
     volumes:
-      - ./plugins/SNS_Login:/var/www/html/app/Plugin/SNS_Login
+      - ./plugins/TPS:/var/www/html/app/Plugin/SNS_Login
+      - ./vendor:/var/www/html/vendor
     networks:
       - sns_login
     depends_on:

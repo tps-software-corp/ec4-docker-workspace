@@ -24,9 +24,16 @@ class Config
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @ORM\Column(name="fb_app_id", type="string", length=255)
      */
-    private $name;
+    private $fb_app_id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="fb_app_secret", type="string", length=255)
+     */
+    private $fb_app_secret;
 
     /**
      * @return int
@@ -37,21 +44,49 @@ class Config
     }
 
     /**
-     * @return string
+     * Get the value of fb_app_id
+     *
+     * @return  string
      */
-    public function getName()
+    public function getFbAppId()
     {
-        return $this->name;
+        return $this->fb_app_id;
     }
 
     /**
-     * @param string $name
+     * Set the value of fb_app_id
      *
-     * @return $this;
+     * @param  string  $fb_app_id
+     *
+     * @return  self
      */
-    public function setName($name)
+    public function setFbAppId(string $fb_app_id)
     {
-        $this->name = $name;
+        $this->fb_app_id = $fb_app_id;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of fb_app_secret
+     *
+     * @return  string
+     */
+    public function getFbAppSecret()
+    {
+        return $this->fb_app_secret;
+    }
+
+    /**
+     * Set the value of fb_app_secret
+     *
+     * @param  string  $fb_app_secret
+     *
+     * @return  self
+     */
+    public function setFbAppSecret(string $fb_app_secret)
+    {
+        $this->fb_app_secret = $fb_app_secret;
 
         return $this;
     }
