@@ -1,1 +1,5 @@
+.DS_Store
+dist
 mysql/mysql_data
+plugins/*
+docker-compose.yml
