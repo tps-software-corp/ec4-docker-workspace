@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: May 08, 2019 at 03:30 AM
--- Server version: 5.7.25
--- PHP Version: 7.2.14
+-- Generation Time: Jul 15, 2019 at 08:41 AM
+-- Server version: 5.7.26
+-- PHP Version: 7.2.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -946,7 +946,7 @@ CREATE TABLE `dtb_member` (
 --
 
 INSERT INTO `dtb_member` (`id`, `work_id`, `authority_id`, `creator_id`, `name`, `department`, `login_id`, `password`, `salt`, `sort_no`, `create_date`, `update_date`, `login_date`, `discriminator_type`) VALUES
-(1, 1, 0, 1, 'Administrator', 'Tabe 01', 'admin', '27df7ed6331d422ad5fe3ff81be37f2a427c41b9042bcb7d5ac86ab6ae9c728e', 'xM2OPQMEYBNrhd3vB8eWa9A22qDpGnj7', 1, '2019-05-06 06:41:02', '2019-05-06 06:41:19', '2019-05-06 06:41:19', 'member');
+(1, 1, 0, 1, 'Administrator', 'Tabe 01', 'admin', '36e523466d5d18af8d0907933c0f72e2c356171ddeb430942c0d95261210e2e3', 'jrnvnS3y0+YmNNKatPYiUDTPfDTYOWmIaxIg+vAZ', 1, '2019-05-06 06:41:02', '2019-07-15 08:41:07', '2019-07-15 08:41:07', 'member');
 
 -- --------------------------------------------------------
 
