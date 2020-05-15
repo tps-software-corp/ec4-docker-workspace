@@ -4,13 +4,14 @@ networks:
     driver: bridge
 services:
   apache:
-    build:
-      context: ./apache
+    env_file:
+      - .env
+    image: tabenguyen/eccube4-apache:{EC_WEB_VERSION}
     ports:
-      - "5080:80"
-      - "5081:443"
+      - "8080:80"
+      - "8443:443"
     volumes:
-      - ./plugins/TPS:/var/www/html/app/Plugin/SNS_Login
+      - ./Plugin:/var/www/html/app/Plugin/{PLUGIN_NAME}
     networks:
       - plg_workspace
     depends_on:
@@ -36,7 +37,7 @@ services:
       - MYSQL_PASSWORD=eccube4
       - MYSQL_ROOT_PASSWORD=root
     ports:
-      - "5082:80"
+      - "8081:80"
     depends_on:
       - "db"
     networks:
