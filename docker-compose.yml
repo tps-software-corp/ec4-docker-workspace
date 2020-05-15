@@ -6,12 +6,12 @@ services:
   apache:
     env_file:
       - .env
-    image: tabenguyen/eccube4-apache:{EC_WEB_VERSION}
+    image: tabenguyen/eccube4-apache:$EC_WEB_VERSION
     ports:
-      - "8080:80"
-      - "8443:443"
+      - "2080:80"
+      - "2443:443"
     volumes:
-      - ./Plugin:/var/www/html/app/Plugin/{PLUGIN_NAME}
+      - ./Plugin:/var/www/html/app/Plugin/$PLUGIN_NAME
     networks:
       - plg_workspace
     depends_on:
@@ -37,7 +37,7 @@ services:
       - MYSQL_PASSWORD=eccube4
       - MYSQL_ROOT_PASSWORD=root
     ports:
-      - "8081:80"
+      - "2081:80"
     depends_on:
       - "db"
     networks:
